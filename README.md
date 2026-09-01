@@ -2,8 +2,8 @@
 
 A single-page Nikkah invitation for [raihajawwad.love](https://raihajawwad.love), built by [Omnitryx Inc.](https://omnitryx.ca)
 
-Open the invitation → hero → a short verse → live countdown → schedule (with Add to Calendar) → venue & map →
-RSVP. One scroll, no other pages.
+Open the invitation → hero → a short verse → live countdown → schedule → venue & map → RSVP. One scroll, no
+other pages.
 
 ## Stack
 

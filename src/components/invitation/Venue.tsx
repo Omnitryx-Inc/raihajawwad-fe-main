@@ -13,10 +13,10 @@ export function Venue() {
         <SectionHeading eyebrow="Venue" title={venue.name} description={venue.subtitle} />
 
         <div className="mx-auto mt-14 grid max-w-5xl gap-10 lg:grid-cols-2 lg:items-stretch">
-          <div className="flex flex-col justify-center">
-            <div className="flex gap-4">
+          <div className="flex flex-col items-center justify-center text-center lg:items-start lg:text-left">
+            <div className="flex items-start gap-3 lg:gap-4">
               <MapPinIcon className="mt-0.5 h-5 w-5 flex-none text-gold-300" />
-              <p className="text-[15px] leading-relaxed text-ivory-100/75">{venue.address}</p>
+              <p className="text-left text-[15px] leading-relaxed text-ivory-100/75">{venue.address}</p>
             </div>
             <a
               href={venue.directionsUrl}

@@ -29,10 +29,10 @@ export function Hero() {
             {occasion.name}
           </h1>
 
-          <p className="mt-10 font-display text-5xl font-medium leading-[1.05] text-ivory-100 sm:text-7xl">
-            {couple.partnerOne}
-            <span className="mx-3 font-script text-4xl text-gold-300 sm:mx-5 sm:text-6xl">&amp;</span>
-            {couple.partnerTwo}
+          <p className="mt-10 flex flex-col items-center gap-3 font-script leading-none text-ivory-100 sm:flex-row sm:justify-center sm:gap-x-4">
+            <span className="text-6xl sm:text-8xl">{couple.partnerOne}</span>
+            <span className="text-6xl text-gold-300 sm:text-8xl">&amp;</span>
+            <span className="text-6xl sm:text-8xl">{couple.partnerTwo}</span>
           </p>
 
           <div className="my-10">

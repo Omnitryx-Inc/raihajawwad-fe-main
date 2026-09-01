@@ -27,9 +27,8 @@ export function RSVP() {
               <div key={contact.name} className="card flex flex-col items-center gap-1 px-5 py-8 text-center">
                 <p className="font-display text-xl font-medium text-ivory-100">{contact.name}</p>
                 <p className="eyebrow text-gold-200">{contact.relation}</p>
-                <p className="mt-2 text-sm text-ivory-100/55">{phone}</p>
 
-                <div className="mt-5 flex gap-3">
+                <div className="mt-6 flex gap-3">
                   <a
                     href={`tel:${digits}`}
                     aria-label={`Call ${contact.name}`}

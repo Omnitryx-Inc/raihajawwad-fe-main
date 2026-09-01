@@ -26,10 +26,6 @@ export const siteConfig = {
     city: 'Karachi, Pakistan',
     // A short, tasteful line shown near the top of the invitation.
     invitationLine: 'Together with their families, request the honour of your presence',
-    // Start/end for the "Add to calendar" event, spanning Gathering through
-    // Dinner. Keep in sync with schedule.events below.
-    calendarStartIso: '2026-10-17T20:30:00+05:00',
-    calendarEndIso: '2026-10-18T00:30:00+05:00',
   },
 
   venue: {
