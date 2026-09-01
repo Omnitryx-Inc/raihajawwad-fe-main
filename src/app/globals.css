@@ -1,0 +1,90 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-feature-settings: 'ss01' 1;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply font-display;
+  }
+
+  ::selection {
+    @apply bg-gold-300 text-ink-950;
+  }
+}
+
+@layer components {
+  .container-page {
+    @apply mx-auto w-full max-w-content px-6 sm:px-10;
+  }
+
+  .section-y {
+    @apply py-20 sm:py-28;
+  }
+
+  .eyebrow {
+    @apply text-[12px] font-semibold uppercase tracking-widest2 text-gold-300;
+  }
+
+  /* Rectangular, slightly-radiused buttons with letter-spaced labels;
+     deliberately not a rounded "pill", which reads generic on an
+     invitation. */
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-sm px-7 py-3.5 text-[13px] font-semibold uppercase tracking-[0.14em] transition-all duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold-300 disabled:cursor-not-allowed disabled:opacity-50;
+  }
+
+  .btn-primary {
+    @apply btn bg-gold-400 text-ink-950 hover:bg-gold-300;
+  }
+
+  .btn-outline {
+    @apply btn border border-ivory-100/25 text-ivory-100 hover:border-gold-300 hover:text-gold-300;
+  }
+
+  .card {
+    @apply rounded-md border border-ivory-100/10 bg-ink-900/60;
+  }
+
+  /* Very low-opacity noise, layered over dark sections for depth so a flat
+     ink/burgundy fill doesn't read as a plain CSS gradient. */
+  .bg-grain {
+    position: relative;
+  }
+  .bg-grain::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    opacity: 0.05;
+    mix-blend-mode: overlay;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+
+  /* Thin gold hairline with the butterfly mark centred on it, the site's
+     recurring section divider. */
+  .ornament-divider {
+    @apply flex items-center justify-center gap-3;
+  }
+  .ornament-divider .ornament-line {
+    @apply h-px w-10 bg-gold-400/50 sm:w-14;
+  }
+}
+
+/* Body-scroll lock while the envelope intro is showing (toggled from
+   EnvelopeIntro via a class on <html>, not inline styles, so it survives
+   static export with no hydration flash). */
+html.envelope-closed,
+html.envelope-closed body {
+  overflow: hidden;
+  height: 100%;
+}
