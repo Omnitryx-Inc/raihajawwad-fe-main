@@ -2,61 +2,56 @@ import { siteConfig } from '@/lib/site.config';
 import { Img } from '@/components/ui/Img';
 import { OrnamentDivider } from '@/components/ui/OrnamentDivider';
 import { MotifScatter } from '@/components/invitation/MotifScatter';
-import { ChevronDownIcon } from '@/components/icons';
 
 export function Hero() {
-  const { couple, occasion } = siteConfig;
+  const { couple, occasion, formalInvite } = siteConfig;
   const hasPhoto = Boolean(siteConfig.media.heroPhoto);
 
   return (
-    <section className="bg-grain relative flex min-h-[100svh] items-center overflow-hidden bg-ink-950">
+    <section
+      className={`bg-grain relative flex items-center overflow-hidden bg-ivory-100 ${hasPhoto ? 'min-h-[100svh]' : ''}`}
+    >
       <div className="absolute inset-0">
         {hasPhoto ? (
           <>
             <Img src={siteConfig.media.heroPhoto as string} alt="" loading="eager" className="h-full w-full object-cover" />
-            <div className="absolute inset-0 bg-gradient-to-b from-ink-950/80 via-ink-950/60 to-ink-950" />
+            <div className="absolute inset-0 bg-gradient-to-b from-ivory-100/30 via-ivory-100/80 to-ivory-100" />
           </>
         ) : (
-          <div className="absolute inset-0 bg-gradient-to-b from-burgundy-900 via-ink-950 to-ink-950" />
+          <div className="absolute inset-0 bg-gradient-to-b from-ivory-200 via-ivory-100 to-ivory-100" />
         )}
       </div>
       <MotifScatter />
 
-      <div className="container-page relative py-32 text-center">
+      <div className={`container-page relative text-center ${hasPhoto ? 'py-32' : 'section-y'}`}>
         <div className="mx-auto max-w-2xl animate-fade-up">
-          <p className="eyebrow">You are invited to our</p>
-          <h1 className="mt-4 font-display text-2xl font-medium uppercase tracking-[0.3em] text-gold-300 sm:text-3xl">
+          <p className="eyebrow">
+            {formalInvite.hostLine} cordially invites you to the
+          </p>
+          <h1 className="text-foil mt-4 font-display text-2xl font-medium uppercase tracking-[0.3em] sm:text-3xl">
             {occasion.name}
           </h1>
 
-          <p className="mt-10 flex flex-col items-center gap-3 font-script leading-none text-ivory-100 sm:flex-row sm:justify-center sm:gap-x-4">
-            <span className="text-6xl sm:text-8xl">{couple.partnerOne}</span>
-            <span className="text-6xl text-gold-300 sm:text-8xl">&amp;</span>
-            <span className="text-6xl sm:text-8xl">{couple.partnerTwo}</span>
+          <p className="mt-10 flex flex-col items-center gap-4 font-script leading-none text-gold-700">
+            <span className="text-4xl sm:text-6xl">{couple.partnerOneFull}</span>
+            <span className="text-foil text-3xl sm:text-5xl">&amp;</span>
+            <span className="text-4xl sm:text-6xl">{couple.partnerTwoFull}</span>
           </p>
 
           <div className="my-10">
             <OrnamentDivider />
           </div>
 
-          <p className="mx-auto max-w-md text-[15px] leading-relaxed text-ivory-100/70">{occasion.invitationLine}</p>
+          <p className="mx-auto max-w-md text-[15px] leading-relaxed text-ink-700/80">{occasion.invitationLine}</p>
 
-          <p className="mt-8 text-lg font-medium text-ivory-100 sm:text-xl">
+          <p className="mt-8 text-lg font-medium text-ink-900 sm:text-xl">
             {occasion.dayLabel}, {occasion.dateLabel}
           </p>
-          <p className="mt-1 text-sm text-ivory-100/60">
+          <p className="mt-1 text-sm text-ink-600">
             {siteConfig.venue.name} &middot; {occasion.city}
           </p>
         </div>
       </div>
-
-      <a
-        href="#schedule"
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 text-ivory-100/50 transition-colors hover:text-gold-300"
-        aria-label="Scroll to details"
-      >
-        <ChevronDownIcon className="h-6 w-6 animate-bounce" />
-      </a>
     </section>
   );
 }

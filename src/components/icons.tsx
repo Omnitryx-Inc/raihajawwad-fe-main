@@ -69,14 +69,6 @@ export function WhatsAppIcon(props: IconProps) {
   );
 }
 
-export function ChevronDownIcon(props: IconProps) {
-  return (
-    <svg {...base} {...props}>
-      <path d="M6 9.5 12 15l6-5.5" />
-    </svg>
-  );
-}
-
 export function ArrowUpRightIcon(props: IconProps) {
   return (
     <svg {...base} {...props}>

@@ -8,15 +8,15 @@ export function Venue() {
   const { venue } = siteConfig;
 
   return (
-    <section id="venue" className="bg-ink-950">
+    <section id="venue" className="bg-ivory-100">
       <div className="container-page section-y">
         <SectionHeading eyebrow="Venue" title={venue.name} description={venue.subtitle} />
 
         <div className="mx-auto mt-14 grid max-w-5xl gap-10 lg:grid-cols-2 lg:items-stretch">
           <div className="flex flex-col items-center justify-center text-center lg:items-start lg:text-left">
             <div className="flex items-start gap-3 lg:gap-4">
-              <MapPinIcon className="mt-0.5 h-5 w-5 flex-none text-gold-300" />
-              <p className="text-left text-[15px] leading-relaxed text-ivory-100/75">{venue.address}</p>
+              <MapPinIcon className="mt-0.5 h-5 w-5 flex-none text-gold-600" />
+              <p className="text-left text-[15px] leading-relaxed text-ink-700">{venue.address}</p>
             </div>
             <a
               href={venue.directionsUrl}
@@ -34,7 +34,7 @@ export function Venue() {
               src={venue.mapEmbedSrc}
               title={`Map to ${venue.name}`}
               loading="lazy"
-              className="h-full min-h-[280px] w-full grayscale invert-[92%] contrast-[90%]"
+              className="h-full min-h-[280px] w-full grayscale-[20%] sepia-[8%]"
               referrerPolicy="no-referrer-when-downgrade"
             />
           </div>

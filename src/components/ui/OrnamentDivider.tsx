@@ -5,7 +5,7 @@ export function OrnamentDivider({ className = '' }: { className?: string }) {
   return (
     <div className={`ornament-divider ${className}`} aria-hidden="true">
       <span className="ornament-line" />
-      <ButterflyIcon className="h-4 w-4 text-gold-300" />
+      <ButterflyIcon className="h-4 w-4 text-gold-600" />
       <span className="ornament-line" />
     </div>
   );

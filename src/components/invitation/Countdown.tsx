@@ -14,19 +14,17 @@ export function Countdown() {
   const timeLeft = useCountdown(siteConfig.occasion.dateTimeIso);
 
   return (
-    <section className="bg-burgundy-900">
+    <section className="bg-ivory-200">
       <div className="container-page py-16 sm:py-20">
-        <p className="eyebrow text-center text-gold-200">
-          {timeLeft?.reached ? 'Today is the day' : 'Counting down to our Nikkah'}
-        </p>
+        <p className="eyebrow text-center">{timeLeft?.reached ? 'Today is the day' : 'Counting down to our Nikkah'}</p>
 
         <div className="mx-auto mt-8 grid max-w-lg grid-cols-4 gap-3 sm:gap-5">
           {UNITS.map((unit) => (
-            <div key={unit.key} className="rounded-md border border-ivory-100/15 bg-ink-950/30 py-5 text-center">
-              <p className="font-display text-3xl font-medium text-ivory-100 tabular-nums sm:text-4xl">
+            <div key={unit.key} className="card py-5 text-center">
+              <p className="text-foil font-display text-3xl font-medium tabular-nums sm:text-4xl">
                 {String(timeLeft ? timeLeft[unit.key] : 0).padStart(2, '0')}
               </p>
-              <p className="mt-1.5 text-[11px] uppercase tracking-widest2 text-ivory-100/55">{unit.label}</p>
+              <p className="mt-1.5 text-[11px] uppercase tracking-widest2 text-ink-500">{unit.label}</p>
             </div>
           ))}
         </div>

@@ -10,6 +10,10 @@ export const siteConfig = {
   couple: {
     partnerOne: 'Raiha',
     partnerTwo: 'Jawwad',
+    // Full legal names, for the formal hero card. Short first names above
+    // are used for the casual signature moments (e.g. the footer).
+    partnerOneFull: 'Raiha Azfar',
+    partnerTwoFull: 'Jawwad Ahmed Abbasi',
     // Shown as the small monogram mark (e.g. in the envelope seal and footer).
     initials: 'R & J',
   },
@@ -28,6 +32,14 @@ export const siteConfig = {
     invitationLine: 'Together with their families, request the honour of your presence',
   },
 
+  // The elder hosting the invitation: in a desi shadi card this is who
+  // issues it, addressed to the guest, not written in the couple's own
+  // voice. Shown in the hero's eyebrow line ("[hostLine] cordially invites
+  // you to the...").
+  formalInvite: {
+    hostLine: 'Mrs. Aftab ur Rehman',
+  },
+
   venue: {
     name: 'Glass Palace',
     subtitle: 'At Duty Free Shop',
@@ -43,7 +55,7 @@ export const siteConfig = {
   // Order matters, rendered as a vertical timeline.
   schedule: {
     events: [
-      { id: 'gathering', label: 'Gathering', time: '8:30 PM', note: 'Arrival & seating' },
+      { id: 'gathering', label: 'Gathering', time: '8:30 PM', note: 'Arrival' },
       { id: 'nikkah', label: 'Nikkah', time: '9:30 PM', note: 'The ceremony' },
       { id: 'dinner', label: 'Dinner', time: '10:00 PM', note: 'Celebration & dinner' },
     ],

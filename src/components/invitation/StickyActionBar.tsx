@@ -17,23 +17,23 @@ export function StickyActionBar() {
 
   return (
     <div
-      className={`bg-grain fixed inset-x-0 bottom-0 z-40 border-t border-ivory-100/10 bg-ink-950/95 backdrop-blur transition-transform duration-300 sm:hidden ${
+      className={`bg-grain fixed inset-x-0 bottom-0 z-40 border-t border-gold-400/30 bg-ivory-100/95 backdrop-blur transition-transform duration-300 sm:hidden ${
         visible ? 'translate-y-0' : 'translate-y-full'
       }`}
     >
-      <div className="flex divide-x divide-ivory-100/10">
+      <div className="flex divide-x divide-gold-400/20">
         <a
           href={siteConfig.venue.directionsUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className="flex flex-1 items-center justify-center gap-2 py-4 text-[13px] font-semibold uppercase tracking-[0.1em] text-ivory-100"
+          className="flex flex-1 items-center justify-center gap-2 py-4 text-[13px] font-semibold uppercase tracking-[0.1em] text-ink-900"
         >
-          <MapPinIcon className="h-4 w-4 text-gold-300" />
+          <MapPinIcon className="h-4 w-4 text-gold-600" />
           Directions
         </a>
         <a
           href="#rsvp"
-          className="flex flex-1 items-center justify-center gap-2 py-4 text-[13px] font-semibold uppercase tracking-[0.1em] text-gold-300"
+          className="flex flex-1 items-center justify-center gap-2 py-4 text-[13px] font-semibold uppercase tracking-[0.1em] text-gold-600"
         >
           RSVP
           <ArrowUpRightIcon className="h-4 w-4" />

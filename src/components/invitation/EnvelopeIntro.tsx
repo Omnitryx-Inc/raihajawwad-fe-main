@@ -41,7 +41,7 @@ export function EnvelopeIntro() {
 
   return (
     <div
-      className={`bg-grain fixed inset-0 z-50 flex flex-col items-center justify-center overflow-hidden bg-gradient-to-b from-ink-950 via-burgundy-900 to-ink-950 transition-all ease-[cubic-bezier(0.16,1,0.3,1)] ${
+      className={`bg-grain fixed inset-0 z-50 flex flex-col items-center justify-center overflow-hidden bg-gradient-to-b from-ivory-200 via-ivory-100 to-ivory-200 transition-all ease-[cubic-bezier(0.16,1,0.3,1)] ${
         exiting ? '-translate-y-full opacity-0 duration-[800ms]' : 'translate-y-0 opacity-100 duration-500'
       }`}
       style={{ transitionDuration: exiting ? `${EXIT_MS}ms` : undefined }}
@@ -49,8 +49,8 @@ export function EnvelopeIntro() {
     >
       {/* soft burst of light from the seal as the flap lifts */}
       <div
-        className={`pointer-events-none absolute h-[70vh] w-[70vh] rounded-full bg-gold-300 blur-3xl transition-opacity duration-700 sm:h-72 sm:w-72 ${
-          flapOpen && !exiting ? 'opacity-[0.12]' : 'opacity-0'
+        className={`pointer-events-none absolute h-[70vh] w-[70vh] rounded-full bg-gold-400 blur-3xl transition-opacity duration-700 sm:h-72 sm:w-72 ${
+          flapOpen && !exiting ? 'opacity-[0.18]' : 'opacity-0'
         }`}
       />
 
@@ -68,21 +68,21 @@ export function EnvelopeIntro() {
           style={{ perspective: '1400px' }}
         >
           {/* pocket back */}
-          <div className="absolute inset-0 rounded-sm border border-gold-400/30 bg-ink-900" />
+          <div className="absolute inset-0 rounded-sm border border-gold-400/50 bg-ivory-200 shadow-[0_8px_30px_rgba(140,107,44,0.15)]" />
 
           {/* card, rises out of the pocket once the flap is open */}
           <div
-            className={`absolute inset-x-3 top-3 flex h-[calc(100%-1.75rem)] flex-col items-center justify-center rounded-[2px] border border-gold-400/40 bg-gradient-to-b from-burgundy-800 to-ink-950 px-4 text-center transition-all ease-[cubic-bezier(0.16,1,0.3,1)] ${
+            className={`absolute inset-x-3 top-3 flex h-[calc(100%-1.75rem)] flex-col items-center justify-center rounded-[2px] border border-gold-400/50 bg-gradient-to-b from-gold-100 to-ivory-100 px-4 text-center transition-all ease-[cubic-bezier(0.16,1,0.3,1)] ${
               cardOut ? '-translate-y-[92%] opacity-100 duration-[750ms]' : 'translate-y-0 opacity-90 duration-500'
             } ${exiting ? 'opacity-0' : ''}`}
           >
-            <ButterflyIcon className="h-8 w-8 text-gold-300 sm:h-9 sm:w-9" />
-            <KiwiIcon className="mt-2 h-4 w-4 text-burgundy-300 sm:h-5 sm:w-5" />
+            <ButterflyIcon className="h-8 w-8 text-gold-600 sm:h-9 sm:w-9" />
+            <KiwiIcon className="mt-2 h-4 w-4 text-gold-500 sm:h-5 sm:w-5" />
           </div>
 
           {/* flap, hinges open from the top */}
           <div
-            className={`absolute inset-x-0 top-0 h-1/2 origin-top bg-gradient-to-b from-burgundy-700 to-burgundy-800 transition-all ease-[cubic-bezier(0.6,0,0.4,1)] ${
+            className={`absolute inset-x-0 top-0 h-1/2 origin-top bg-gradient-to-b from-gold-300 to-gold-500 transition-all ease-[cubic-bezier(0.6,0,0.4,1)] ${
               flapOpen ? 'opacity-20 duration-[650ms]' : 'opacity-100 duration-500'
             }`}
             style={{
@@ -94,13 +94,13 @@ export function EnvelopeIntro() {
 
           {/* wax seal, sits on the flap's tip and breaks apart as it lifts */}
           <div
-            className={`absolute left-1/2 top-1/2 flex h-16 w-16 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border border-gold-400/50 bg-ink-950 shadow-[0_0_0_3px_rgba(10,7,7,0.6)] transition-all duration-500 sm:h-11 sm:w-11 ${
+            className={`absolute left-1/2 top-1/2 flex h-16 w-16 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border border-gold-500 bg-ivory-100 shadow-[0_0_0_3px_rgba(200,160,72,0.25)] transition-all duration-500 sm:h-11 sm:w-11 ${
               flapOpen ? 'scale-50 opacity-0' : 'scale-100 opacity-100'
             }`}
           >
-            <ButterflyIcon className="h-7 w-7 text-gold-300 sm:h-5 sm:w-5" />
-            <span className="absolute -bottom-1.5 -right-1.5 flex h-6 w-6 items-center justify-center rounded-full border border-gold-400/50 bg-ink-950 sm:-bottom-1 sm:-right-1 sm:h-4 sm:w-4">
-              <KiwiIcon className="h-3 w-3 text-burgundy-300 sm:h-2 sm:w-2" />
+            <ButterflyIcon className="h-7 w-7 text-gold-600 sm:h-5 sm:w-5" />
+            <span className="absolute -bottom-1.5 -right-1.5 flex h-6 w-6 items-center justify-center rounded-full border border-gold-500/70 bg-ivory-100 sm:-bottom-1 sm:-right-1 sm:h-4 sm:w-4">
+              <KiwiIcon className="h-3 w-3 text-gold-500 sm:h-2 sm:w-2" />
             </span>
           </div>
         </div>
