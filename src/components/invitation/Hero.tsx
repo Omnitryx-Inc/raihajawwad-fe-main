@@ -26,13 +26,10 @@ export function Hero() {
       <div className={`container-page relative text-center ${hasPhoto ? 'py-32' : 'section-y'}`}>
         <div className="mx-auto max-w-2xl animate-fade-up">
           <p className="eyebrow">
-            {formalInvite.hostLine} cordially invites you to the
+            {formalInvite.hostLine} cordially invites you to the wedding ceremony of
           </p>
-          <h1 className="text-foil mt-4 font-display text-2xl font-medium uppercase tracking-[0.3em] sm:text-3xl">
-            {occasion.name}
-          </h1>
 
-          <p className="mt-10 flex flex-col items-center gap-4 font-script leading-none text-gold-700">
+          <p className="mt-6 flex flex-col items-center gap-4 font-script leading-none text-gold-700">
             <span className="text-4xl sm:text-6xl">{couple.partnerOneFull}</span>
             <span className="text-foil text-3xl sm:text-5xl">&amp;</span>
             <span className="text-4xl sm:text-6xl">{couple.partnerTwoFull}</span>
@@ -42,13 +39,8 @@ export function Hero() {
             <OrnamentDivider />
           </div>
 
-          <p className="mx-auto max-w-md text-[15px] leading-relaxed text-ink-700/80">{occasion.invitationLine}</p>
-
-          <p className="mt-8 text-lg font-medium text-ink-900 sm:text-xl">
+          <p className="mt-2 text-lg font-medium text-ink-900 sm:text-xl">
             {occasion.dayLabel}, {occasion.dateLabel}
-          </p>
-          <p className="mt-1 text-sm text-ink-600">
-            {siteConfig.venue.name} &middot; {occasion.city}
           </p>
         </div>
       </div>

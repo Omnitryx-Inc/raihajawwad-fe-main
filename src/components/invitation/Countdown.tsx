@@ -16,7 +16,7 @@ export function Countdown() {
   return (
     <section className="bg-ivory-200">
       <div className="container-page py-16 sm:py-20">
-        <p className="eyebrow text-center">{timeLeft?.reached ? 'Today is the day' : 'Counting down to our Nikkah'}</p>
+        <p className="eyebrow text-center">{timeLeft?.reached ? 'Today is the day' : 'Counting down to our Wedding'}</p>
 
         <div className="mx-auto mt-8 grid max-w-lg grid-cols-4 gap-3 sm:gap-5">
           {UNITS.map((unit) => (

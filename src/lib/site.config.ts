@@ -19,7 +19,6 @@ export const siteConfig = {
   },
 
   occasion: {
-    name: 'Nikkah',
     // ISO 8601, in Karachi local time (Asia/Karachi, UTC+5). Used for the
     // countdown and the calendar links, so keep this in sync with
     // schedule.events[1] (Nikkah) below.
@@ -27,9 +26,6 @@ export const siteConfig = {
     // Human-readable date shown throughout the page.
     dateLabel: '17 October 2026',
     dayLabel: 'Saturday',
-    city: 'Karachi, Pakistan',
-    // A short, tasteful line shown near the top of the invitation.
-    invitationLine: 'Together with their families, request the honour of your presence',
   },
 
   // The elder hosting the invitation: in a desi shadi card this is who
